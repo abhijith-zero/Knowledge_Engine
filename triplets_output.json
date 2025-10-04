@@ -1,0 +1,506 @@
+[
+    {
+        "paper_id": 1,
+        "subject": "main_content",
+        "predicate": "occur",
+        "object": "in"
+    },
+    {
+        "paper_id": 1,
+        "subject": "microgravity",
+        "predicate": "present",
+        "object": "opportunity"
+    },
+    {
+        "paper_id": 1,
+        "subject": "forces",
+        "predicate": "impact",
+        "object": "organization"
+    },
+    {
+        "paper_id": 1,
+        "subject": "changes",
+        "predicate": "affect",
+        "object": "processes"
+    },
+    {
+        "paper_id": 1,
+        "subject": "research",
+        "predicate": "conduct",
+        "object": "aboard"
+    },
+    {
+        "paper_id": 1,
+        "subject": "laboratories",
+        "predicate": "adopt",
+        "object": "technologies"
+    },
+    {
+        "paper_id": 1,
+        "subject": "investigations",
+        "predicate": "conduct",
+        "object": "in"
+    },
+    {
+        "paper_id": 1,
+        "subject": "environment",
+        "predicate": "disrupt",
+        "object": "mechanisms"
+    },
+    {
+        "paper_id": 1,
+        "subject": "Advances",
+        "predicate": "create",
+        "object": "opportunities"
+    },
+    {
+        "paper_id": 1,
+        "subject": "Microgravity",
+        "predicate": "hold",
+        "object": "promise"
+    },
+    {
+        "paper_id": 1,
+        "subject": "findings",
+        "predicate": "emphasize",
+        "object": "potential"
+    },
+    {
+        "paper_id": 1,
+        "subject": "microgravity",
+        "predicate": "impose",
+        "object": "effects"
+    },
+    {
+        "paper_id": 1,
+        "subject": "effects",
+        "predicate": "include",
+        "object": "redistribution"
+    },
+    {
+        "paper_id": 1,
+        "subject": "microgravity",
+        "predicate": "alter",
+        "object": "expression"
+    },
+    {
+        "paper_id": 1,
+        "subject": "microgravity",
+        "predicate": "reduce",
+        "object": "activity"
+    },
+    {
+        "paper_id": 1,
+        "subject": "effects",
+        "predicate": "highlight",
+        "object": "necessity"
+    },
+    {
+        "paper_id": 1,
+        "subject": "studies",
+        "predicate": "document",
+        "object": "changes"
+    },
+    {
+        "paper_id": 1,
+        "subject": "research",
+        "predicate": "lead",
+        "object": "to"
+    },
+    {
+        "paper_id": 1,
+        "subject": "study",
+        "predicate": "produce",
+        "object": "purer"
+    },
+    {
+        "paper_id": 1,
+        "subject": "research",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 1,
+        "subject": "advancements",
+        "predicate": "enhance",
+        "object": "safety"
+    },
+    {
+        "paper_id": 1,
+        "subject": "models",
+        "predicate": "remain",
+        "object": "tools"
+    },
+    {
+        "paper_id": 1,
+        "subject": "study",
+        "predicate": "expand",
+        "object": "understanding"
+    },
+    {
+        "paper_id": 1,
+        "subject": "research",
+        "predicate": "establish",
+        "object": "itself"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Responses",
+        "predicate": "include",
+        "object": "deficits"
+    },
+    {
+        "paper_id": 2,
+        "subject": "astronauts",
+        "predicate": "stay",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "shift",
+        "predicate": "invoke",
+        "object": "endocrine"
+    },
+    {
+        "paper_id": 2,
+        "subject": "alterations",
+        "predicate": "diminish",
+        "object": "capability"
+    },
+    {
+        "paper_id": 2,
+        "subject": "unloading",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "cause",
+        "object": "volume"
+    },
+    {
+        "paper_id": 2,
+        "subject": "reduction",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "affect",
+        "object": "mass"
+    },
+    {
+        "paper_id": 2,
+        "subject": "habitation",
+        "predicate": "expose",
+        "object": "astronauts"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "cause",
+        "object": "changes"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Spaceflight",
+        "predicate": "alter",
+        "object": "expression"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Spaceflight",
+        "predicate": "elevate",
+        "object": "expression"
+    },
+    {
+        "paper_id": 2,
+        "subject": "we",
+        "predicate": "use",
+        "object": "arrays"
+    },
+    {
+        "paper_id": 2,
+        "subject": "findings",
+        "predicate": "provide",
+        "object": "insight"
+    },
+    {
+        "paper_id": 2,
+        "subject": "experiments",
+        "predicate": "present",
+        "object": "challenges"
+    },
+    {
+        "paper_id": 2,
+        "subject": "reports",
+        "predicate": "describe",
+        "object": "results"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "upregulate",
+        "object": "activity"
+    },
+    {
+        "paper_id": 2,
+        "subject": "exposure",
+        "predicate": "lead",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "cause",
+        "object": "cells"
+    },
+    {
+        "paper_id": 2,
+        "subject": "analysis",
+        "predicate": "reveal",
+        "object": "levels"
+    },
+    {
+        "paper_id": 2,
+        "subject": "tissues",
+        "predicate": "display",
+        "object": "levels"
+    },
+    {
+        "paper_id": 2,
+        "subject": "mice",
+        "predicate": "protect",
+        "object": "from"
+    },
+    {
+        "paper_id": 2,
+        "subject": "NOX1",
+        "predicate": "belong",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "NOX1",
+        "predicate": "utilize",
+        "object": "NADPH"
+    },
+    {
+        "paper_id": 2,
+        "subject": "expression",
+        "predicate": "cause",
+        "object": "increase"
+    },
+    {
+        "paper_id": 2,
+        "subject": "studies",
+        "predicate": "reduce",
+        "object": "size"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Inhibition",
+        "predicate": "reduce",
+        "object": "markers"
+    },
+    {
+        "paper_id": 2,
+        "subject": "results",
+        "predicate": "support",
+        "object": "hypothesis"
+    },
+    {
+        "paper_id": 2,
+        "subject": "results",
+        "predicate": "show",
+        "object": "expression"
+    },
+    {
+        "paper_id": 2,
+        "subject": "expression",
+        "predicate": "lead",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "decreases",
+        "predicate": "exercise",
+        "object": "tolerance"
+    },
+    {
+        "paper_id": 2,
+        "subject": "pathway",
+        "predicate": "play",
+        "object": "role"
+    },
+    {
+        "paper_id": 2,
+        "subject": "spaceflight",
+        "predicate": "prevent",
+        "object": "induction"
+    },
+    {
+        "paper_id": 2,
+        "subject": "regulation",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "codes",
+        "predicate": "cause",
+        "object": "sensitivity"
+    },
+    {
+        "paper_id": 2,
+        "subject": "results",
+        "predicate": "indicate",
+        "object": "changes"
+    },
+    {
+        "paper_id": 2,
+        "subject": "progression",
+        "predicate": "regulate",
+        "object": "at"
+    },
+    {
+        "paper_id": 2,
+        "subject": "levels",
+        "predicate": "analyze",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "p53",
+        "predicate": "include",
+        "object": "genes"
+    },
+    {
+        "paper_id": 2,
+        "subject": "We",
+        "predicate": "find",
+        "object": "hearts"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Increases",
+        "predicate": "associate",
+        "object": "with"
+    },
+    {
+        "paper_id": 2,
+        "subject": "heart",
+        "predicate": "limit",
+        "object": "ability"
+    },
+    {
+        "paper_id": 2,
+        "subject": "elevation",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "elevation",
+        "predicate": "interfere",
+        "object": "with"
+    },
+    {
+        "paper_id": 2,
+        "subject": "PTTG1",
+        "predicate": "regulate",
+        "object": "cycle"
+    },
+    {
+        "paper_id": 2,
+        "subject": "decrease",
+        "predicate": "contribute",
+        "object": "to"
+    },
+    {
+        "paper_id": 2,
+        "subject": "cyclins",
+        "predicate": "downregulate",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "this",
+        "predicate": "suggest",
+        "object": "Expression"
+    },
+    {
+        "paper_id": 2,
+        "subject": "genes",
+        "predicate": "alter",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "we",
+        "predicate": "rule",
+        "object": "possibility"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Evidence",
+        "predicate": "downregulate",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "expression",
+        "predicate": "observe",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "cultures",
+        "predicate": "show",
+        "object": "decrement"
+    },
+    {
+        "paper_id": 2,
+        "subject": "findings",
+        "predicate": "implicate",
+        "object": "mechanism"
+    },
+    {
+        "paper_id": 2,
+        "subject": "subset",
+        "predicate": "associate",
+        "object": "with"
+    },
+    {
+        "paper_id": 2,
+        "subject": "pressures",
+        "predicate": "change",
+        "object": "during"
+    },
+    {
+        "paper_id": 2,
+        "subject": "output",
+        "predicate": "increase",
+        "object": "in"
+    },
+    {
+        "paper_id": 2,
+        "subject": "Factors",
+        "predicate": "include",
+        "object": "duration"
+    },
+    {
+        "paper_id": 2,
+        "subject": "changes",
+        "predicate": "reflect",
+        "object": "changes"
+    },
+    {
+        "paper_id": 2,
+        "subject": "experiments",
+        "predicate": "focus",
+        "object": "on"
+    }
+]

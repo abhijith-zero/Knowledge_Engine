@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 700px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "main_content", "label": "main_content", "shape": "dot", "size": 10, "title": "main_content"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "in", "label": "in", "shape": "dot", "size": 10, "title": "in"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "microgravity", "label": "microgravity", "shape": "dot", "size": 10, "title": "microgravity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "opportunity", "label": "opportunity", "shape": "dot", "size": 10, "title": "opportunity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "effects", "label": "effects", "shape": "dot", "size": 10, "title": "effects"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "expression", "label": "expression", "shape": "dot", "size": 10, "title": "expression"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "activity", "label": "activity", "shape": "dot", "size": 10, "title": "activity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "forces", "label": "forces", "shape": "dot", "size": 10, "title": "forces"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "organization", "label": "organization", "shape": "dot", "size": 10, "title": "organization"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "changes", "label": "changes", "shape": "dot", "size": 10, "title": "changes"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "processes", "label": "processes", "shape": "dot", "size": 10, "title": "processes"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "research", "label": "research", "shape": "dot", "size": 10, "title": "research"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "aboard", "label": "aboard", "shape": "dot", "size": 10, "title": "aboard"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "to", "label": "to", "shape": "dot", "size": 10, "title": "to"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "itself", "label": "itself", "shape": "dot", "size": 10, "title": "itself"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "laboratories", "label": "laboratories", "shape": "dot", "size": 10, "title": "laboratories"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "technologies", "label": "technologies", "shape": "dot", "size": 10, "title": "technologies"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "investigations", "label": "investigations", "shape": "dot", "size": 10, "title": "investigations"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "environment", "label": "environment", "shape": "dot", "size": 10, "title": "environment"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mechanisms", "label": "mechanisms", "shape": "dot", "size": 10, "title": "mechanisms"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Advances", "label": "Advances", "shape": "dot", "size": 10, "title": "Advances"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "opportunities", "label": "opportunities", "shape": "dot", "size": 10, "title": "opportunities"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Microgravity", "label": "Microgravity", "shape": "dot", "size": 10, "title": "Microgravity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "promise", "label": "promise", "shape": "dot", "size": 10, "title": "promise"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "findings", "label": "findings", "shape": "dot", "size": 10, "title": "findings"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "potential", "label": "potential", "shape": "dot", "size": 10, "title": "potential"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "insight", "label": "insight", "shape": "dot", "size": 10, "title": "insight"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mechanism", "label": "mechanism", "shape": "dot", "size": 10, "title": "mechanism"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "redistribution", "label": "redistribution", "shape": "dot", "size": 10, "title": "redistribution"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "necessity", "label": "necessity", "shape": "dot", "size": 10, "title": "necessity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "increase", "label": "increase", "shape": "dot", "size": 10, "title": "increase"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "studies", "label": "studies", "shape": "dot", "size": 10, "title": "studies"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "size", "label": "size", "shape": "dot", "size": 10, "title": "size"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "study", "label": "study", "shape": "dot", "size": 10, "title": "study"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "purer", "label": "purer", "shape": "dot", "size": 10, "title": "purer"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "understanding", "label": "understanding", "shape": "dot", "size": 10, "title": "understanding"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "advancements", "label": "advancements", "shape": "dot", "size": 10, "title": "advancements"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "safety", "label": "safety", "shape": "dot", "size": 10, "title": "safety"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "models", "label": "models", "shape": "dot", "size": 10, "title": "models"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "tools", "label": "tools", "shape": "dot", "size": 10, "title": "tools"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Responses", "label": "Responses", "shape": "dot", "size": 10, "title": "Responses"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "deficits", "label": "deficits", "shape": "dot", "size": 10, "title": "deficits"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "astronauts", "label": "astronauts", "shape": "dot", "size": 10, "title": "astronauts"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "shift", "label": "shift", "shape": "dot", "size": 10, "title": "shift"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "endocrine", "label": "endocrine", "shape": "dot", "size": 10, "title": "endocrine"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "alterations", "label": "alterations", "shape": "dot", "size": 10, "title": "alterations"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "capability", "label": "capability", "shape": "dot", "size": 10, "title": "capability"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "unloading", "label": "unloading", "shape": "dot", "size": 10, "title": "unloading"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "spaceflight", "label": "spaceflight", "shape": "dot", "size": 10, "title": "spaceflight"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "volume", "label": "volume", "shape": "dot", "size": 10, "title": "volume"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mass", "label": "mass", "shape": "dot", "size": 10, "title": "mass"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cells", "label": "cells", "shape": "dot", "size": 10, "title": "cells"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "induction", "label": "induction", "shape": "dot", "size": 10, "title": "induction"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "reduction", "label": "reduction", "shape": "dot", "size": 10, "title": "reduction"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "habitation", "label": "habitation", "shape": "dot", "size": 10, "title": "habitation"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Spaceflight", "label": "Spaceflight", "shape": "dot", "size": 10, "title": "Spaceflight"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "we", "label": "we", "shape": "dot", "size": 10, "title": "we"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "arrays", "label": "arrays", "shape": "dot", "size": 10, "title": "arrays"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "possibility", "label": "possibility", "shape": "dot", "size": 10, "title": "possibility"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "experiments", "label": "experiments", "shape": "dot", "size": 10, "title": "experiments"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "challenges", "label": "challenges", "shape": "dot", "size": 10, "title": "challenges"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "on", "label": "on", "shape": "dot", "size": 10, "title": "on"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "reports", "label": "reports", "shape": "dot", "size": 10, "title": "reports"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "results", "label": "results", "shape": "dot", "size": 10, "title": "results"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "hypothesis", "label": "hypothesis", "shape": "dot", "size": 10, "title": "hypothesis"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "exposure", "label": "exposure", "shape": "dot", "size": 10, "title": "exposure"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "analysis", "label": "analysis", "shape": "dot", "size": 10, "title": "analysis"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "levels", "label": "levels", "shape": "dot", "size": 10, "title": "levels"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "tissues", "label": "tissues", "shape": "dot", "size": 10, "title": "tissues"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mice", "label": "mice", "shape": "dot", "size": 10, "title": "mice"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "from", "label": "from", "shape": "dot", "size": 10, "title": "from"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "NOX1", "label": "NOX1", "shape": "dot", "size": 10, "title": "NOX1"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "NADPH", "label": "NADPH", "shape": "dot", "size": 10, "title": "NADPH"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Inhibition", "label": "Inhibition", "shape": "dot", "size": 10, "title": "Inhibition"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "markers", "label": "markers", "shape": "dot", "size": 10, "title": "markers"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "decreases", "label": "decreases", "shape": "dot", "size": 10, "title": "decreases"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "tolerance", "label": "tolerance", "shape": "dot", "size": 10, "title": "tolerance"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pathway", "label": "pathway", "shape": "dot", "size": 10, "title": "pathway"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "role", "label": "role", "shape": "dot", "size": 10, "title": "role"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "regulation", "label": "regulation", "shape": "dot", "size": 10, "title": "regulation"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "codes", "label": "codes", "shape": "dot", "size": 10, "title": "codes"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "sensitivity", "label": "sensitivity", "shape": "dot", "size": 10, "title": "sensitivity"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "progression", "label": "progression", "shape": "dot", "size": 10, "title": "progression"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "at", "label": "at", "shape": "dot", "size": 10, "title": "at"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "p53", "label": "p53", "shape": "dot", "size": 10, "title": "p53"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "genes", "label": "genes", "shape": "dot", "size": 10, "title": "genes"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "We", "label": "We", "shape": "dot", "size": 10, "title": "We"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "hearts", "label": "hearts", "shape": "dot", "size": 10, "title": "hearts"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Increases", "label": "Increases", "shape": "dot", "size": 10, "title": "Increases"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "with", "label": "with", "shape": "dot", "size": 10, "title": "with"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "heart", "label": "heart", "shape": "dot", "size": 10, "title": "heart"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ability", "label": "ability", "shape": "dot", "size": 10, "title": "ability"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "elevation", "label": "elevation", "shape": "dot", "size": 10, "title": "elevation"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "PTTG1", "label": "PTTG1", "shape": "dot", "size": 10, "title": "PTTG1"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cycle", "label": "cycle", "shape": "dot", "size": 10, "title": "cycle"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "decrease", "label": "decrease", "shape": "dot", "size": 10, "title": "decrease"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cyclins", "label": "cyclins", "shape": "dot", "size": 10, "title": "cyclins"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "this", "label": "this", "shape": "dot", "size": 10, "title": "this"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Expression", "label": "Expression", "shape": "dot", "size": 10, "title": "Expression"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Evidence", "label": "Evidence", "shape": "dot", "size": 10, "title": "Evidence"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cultures", "label": "cultures", "shape": "dot", "size": 10, "title": "cultures"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "decrement", "label": "decrement", "shape": "dot", "size": 10, "title": "decrement"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "subset", "label": "subset", "shape": "dot", "size": 10, "title": "subset"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pressures", "label": "pressures", "shape": "dot", "size": 10, "title": "pressures"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "during", "label": "during", "shape": "dot", "size": 10, "title": "during"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "output", "label": "output", "shape": "dot", "size": 10, "title": "output"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Factors", "label": "Factors", "shape": "dot", "size": 10, "title": "Factors"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "duration", "label": "duration", "shape": "dot", "size": 10, "title": "duration"}]);
+                  edges = new vis.DataSet([{"from": "main_content", "title": "related_to", "to": "in", "width": 1}, {"from": "microgravity", "title": "related_to", "to": "opportunity", "width": 1}, {"from": "microgravity", "title": "related_to", "to": "effects", "width": 1}, {"from": "microgravity", "title": "related_to", "to": "expression", "width": 1}, {"from": "microgravity", "title": "related_to", "to": "activity", "width": 1}, {"from": "forces", "title": "related_to", "to": "organization", "width": 1}, {"from": "changes", "title": "related_to", "to": "processes", "width": 1}, {"from": "changes", "title": "related_to", "to": "changes", "width": 1}, {"from": "research", "title": "related_to", "to": "aboard", "width": 1}, {"from": "research", "title": "related_to", "to": "to", "width": 1}, {"from": "research", "title": "related_to", "to": "itself", "width": 1}, {"from": "laboratories", "title": "related_to", "to": "technologies", "width": 1}, {"from": "investigations", "title": "related_to", "to": "in", "width": 1}, {"from": "environment", "title": "related_to", "to": "mechanisms", "width": 1}, {"from": "Advances", "title": "related_to", "to": "opportunities", "width": 1}, {"from": "Microgravity", "title": "related_to", "to": "promise", "width": 1}, {"from": "findings", "title": "related_to", "to": "potential", "width": 1}, {"from": "findings", "title": "related_to", "to": "insight", "width": 1}, {"from": "findings", "title": "related_to", "to": "mechanism", "width": 1}, {"from": "effects", "title": "related_to", "to": "redistribution", "width": 1}, {"from": "effects", "title": "related_to", "to": "necessity", "width": 1}, {"from": "expression", "title": "related_to", "to": "increase", "width": 1}, {"from": "expression", "title": "related_to", "to": "to", "width": 1}, {"from": "expression", "title": "related_to", "to": "in", "width": 1}, {"from": "studies", "title": "related_to", "to": "changes", "width": 1}, {"from": "studies", "title": "related_to", "to": "size", "width": 1}, {"from": "study", "title": "related_to", "to": "purer", "width": 1}, {"from": "study", "title": "related_to", "to": "understanding", "width": 1}, {"from": "advancements", "title": "related_to", "to": "safety", "width": 1}, {"from": "models", "title": "related_to", "to": "tools", "width": 1}, {"from": "Responses", "title": "related_to", "to": "deficits", "width": 1}, {"from": "astronauts", "title": "related_to", "to": "in", "width": 1}, {"from": "shift", "title": "related_to", "to": "endocrine", "width": 1}, {"from": "alterations", "title": "related_to", "to": "capability", "width": 1}, {"from": "unloading", "title": "related_to", "to": "to", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "volume", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "mass", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "changes", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "activity", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "cells", "width": 1}, {"from": "spaceflight", "title": "related_to", "to": "induction", "width": 1}, {"from": "reduction", "title": "related_to", "to": "to", "width": 1}, {"from": "habitation", "title": "related_to", "to": "astronauts", "width": 1}, {"from": "Spaceflight", "title": "related_to", "to": "expression", "width": 1}, {"from": "we", "title": "related_to", "to": "arrays", "width": 1}, {"from": "we", "title": "related_to", "to": "possibility", "width": 1}, {"from": "experiments", "title": "related_to", "to": "challenges", "width": 1}, {"from": "experiments", "title": "related_to", "to": "on", "width": 1}, {"from": "reports", "title": "related_to", "to": "results", "width": 1}, {"from": "results", "title": "related_to", "to": "hypothesis", "width": 1}, {"from": "results", "title": "related_to", "to": "expression", "width": 1}, {"from": "results", "title": "related_to", "to": "changes", "width": 1}, {"from": "exposure", "title": "related_to", "to": "to", "width": 1}, {"from": "analysis", "title": "related_to", "to": "levels", "width": 1}, {"from": "levels", "title": "related_to", "to": "in", "width": 1}, {"from": "tissues", "title": "related_to", "to": "levels", "width": 1}, {"from": "mice", "title": "related_to", "to": "from", "width": 1}, {"from": "NOX1", "title": "related_to", "to": "to", "width": 1}, {"from": "NOX1", "title": "related_to", "to": "NADPH", "width": 1}, {"from": "Inhibition", "title": "related_to", "to": "markers", "width": 1}, {"from": "decreases", "title": "related_to", "to": "tolerance", "width": 1}, {"from": "pathway", "title": "related_to", "to": "role", "width": 1}, {"from": "regulation", "title": "related_to", "to": "to", "width": 1}, {"from": "codes", "title": "related_to", "to": "sensitivity", "width": 1}, {"from": "progression", "title": "related_to", "to": "at", "width": 1}, {"from": "p53", "title": "related_to", "to": "genes", "width": 1}, {"from": "genes", "title": "related_to", "to": "in", "width": 1}, {"from": "We", "title": "related_to", "to": "hearts", "width": 1}, {"from": "Increases", "title": "related_to", "to": "with", "width": 1}, {"from": "heart", "title": "related_to", "to": "ability", "width": 1}, {"from": "elevation", "title": "related_to", "to": "to", "width": 1}, {"from": "elevation", "title": "related_to", "to": "with", "width": 1}, {"from": "PTTG1", "title": "related_to", "to": "cycle", "width": 1}, {"from": "decrease", "title": "related_to", "to": "to", "width": 1}, {"from": "cyclins", "title": "related_to", "to": "in", "width": 1}, {"from": "this", "title": "related_to", "to": "Expression", "width": 1}, {"from": "Evidence", "title": "related_to", "to": "in", "width": 1}, {"from": "cultures", "title": "related_to", "to": "decrement", "width": 1}, {"from": "subset", "title": "related_to", "to": "with", "width": 1}, {"from": "pressures", "title": "related_to", "to": "during", "width": 1}, {"from": "output", "title": "related_to", "to": "in", "width": 1}, {"from": "Factors", "title": "related_to", "to": "duration", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

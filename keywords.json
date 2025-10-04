@@ -1,0 +1,638 @@
+[
+    {
+        "triplet_id": 1,
+        "keywords": [
+            "main_content",
+            "occur"
+        ]
+    },
+    {
+        "triplet_id": 2,
+        "keywords": [
+            "microgravity",
+            "opportunity",
+            "present"
+        ]
+    },
+    {
+        "triplet_id": 3,
+        "keywords": [
+            "forces",
+            "impact",
+            "organization"
+        ]
+    },
+    {
+        "triplet_id": 4,
+        "keywords": [
+            "processes",
+            "changes",
+            "affect"
+        ]
+    },
+    {
+        "triplet_id": 5,
+        "keywords": [
+            "research",
+            "aboard",
+            "conduct"
+        ]
+    },
+    {
+        "triplet_id": 6,
+        "keywords": [
+            "laboratories",
+            "technologies",
+            "adopt"
+        ]
+    },
+    {
+        "triplet_id": 7,
+        "keywords": [
+            "investigations",
+            "conduct"
+        ]
+    },
+    {
+        "triplet_id": 8,
+        "keywords": [
+            "environment",
+            "disrupt",
+            "mechanisms"
+        ]
+    },
+    {
+        "triplet_id": 9,
+        "keywords": [
+            "advances",
+            "opportunities",
+            "create"
+        ]
+    },
+    {
+        "triplet_id": 10,
+        "keywords": [
+            "microgravity",
+            "hold",
+            "promise"
+        ]
+    },
+    {
+        "triplet_id": 11,
+        "keywords": [
+            "findings",
+            "potential",
+            "emphasize"
+        ]
+    },
+    {
+        "triplet_id": 12,
+        "keywords": [
+            "microgravity",
+            "effects",
+            "impose"
+        ]
+    },
+    {
+        "triplet_id": 13,
+        "keywords": [
+            "redistribution",
+            "effects",
+            "include"
+        ]
+    },
+    {
+        "triplet_id": 14,
+        "keywords": [
+            "microgravity",
+            "expression",
+            "alter"
+        ]
+    },
+    {
+        "triplet_id": 15,
+        "keywords": [
+            "microgravity",
+            "activity",
+            "reduce"
+        ]
+    },
+    {
+        "triplet_id": 16,
+        "keywords": [
+            "highlight",
+            "effects",
+            "necessity"
+        ]
+    },
+    {
+        "triplet_id": 17,
+        "keywords": [
+            "studies",
+            "document",
+            "changes"
+        ]
+    },
+    {
+        "triplet_id": 18,
+        "keywords": [
+            "research",
+            "lead"
+        ]
+    },
+    {
+        "triplet_id": 19,
+        "keywords": [
+            "purer",
+            "study",
+            "produce"
+        ]
+    },
+    {
+        "triplet_id": 20,
+        "keywords": [
+            "research",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 21,
+        "keywords": [
+            "safety",
+            "advancements",
+            "enhance"
+        ]
+    },
+    {
+        "triplet_id": 22,
+        "keywords": [
+            "models",
+            "tools",
+            "remain"
+        ]
+    },
+    {
+        "triplet_id": 23,
+        "keywords": [
+            "study",
+            "expand",
+            "understanding"
+        ]
+    },
+    {
+        "triplet_id": 24,
+        "keywords": [
+            "research",
+            "establish"
+        ]
+    },
+    {
+        "triplet_id": 25,
+        "keywords": [
+            "deficits",
+            "responses",
+            "include"
+        ]
+    },
+    {
+        "triplet_id": 26,
+        "keywords": [
+            "astronauts",
+            "stay"
+        ]
+    },
+    {
+        "triplet_id": 27,
+        "keywords": [
+            "endocrine",
+            "shift",
+            "invoke"
+        ]
+    },
+    {
+        "triplet_id": 28,
+        "keywords": [
+            "alterations",
+            "capability",
+            "diminish"
+        ]
+    },
+    {
+        "triplet_id": 29,
+        "keywords": [
+            "unloading",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 30,
+        "keywords": [
+            "volume",
+            "spaceflight",
+            "cause"
+        ]
+    },
+    {
+        "triplet_id": 31,
+        "keywords": [
+            "reduction",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 32,
+        "keywords": [
+            "mass",
+            "spaceflight",
+            "affect"
+        ]
+    },
+    {
+        "triplet_id": 33,
+        "keywords": [
+            "astronauts",
+            "habitation",
+            "expose"
+        ]
+    },
+    {
+        "triplet_id": 34,
+        "keywords": [
+            "spaceflight",
+            "changes",
+            "cause"
+        ]
+    },
+    {
+        "triplet_id": 35,
+        "keywords": [
+            "expression",
+            "spaceflight",
+            "alter"
+        ]
+    },
+    {
+        "triplet_id": 36,
+        "keywords": [
+            "elevate",
+            "expression",
+            "spaceflight"
+        ]
+    },
+    {
+        "triplet_id": 37,
+        "keywords": [
+            "arrays",
+            "use"
+        ]
+    },
+    {
+        "triplet_id": 38,
+        "keywords": [
+            "findings",
+            "insight",
+            "provide"
+        ]
+    },
+    {
+        "triplet_id": 39,
+        "keywords": [
+            "experiments",
+            "challenges",
+            "present"
+        ]
+    },
+    {
+        "triplet_id": 40,
+        "keywords": [
+            "reports",
+            "results"
+        ]
+    },
+    {
+        "triplet_id": 41,
+        "keywords": [
+            "spaceflight",
+            "activity",
+            "upregulate"
+        ]
+    },
+    {
+        "triplet_id": 42,
+        "keywords": [
+            "exposure",
+            "lead"
+        ]
+    },
+    {
+        "triplet_id": 43,
+        "keywords": [
+            "cells",
+            "spaceflight",
+            "cause"
+        ]
+    },
+    {
+        "triplet_id": 44,
+        "keywords": [
+            "reveal",
+            "analysis",
+            "levels"
+        ]
+    },
+    {
+        "triplet_id": 45,
+        "keywords": [
+            "tissues",
+            "levels",
+            "display"
+        ]
+    },
+    {
+        "triplet_id": 46,
+        "keywords": [
+            "mice",
+            "protect"
+        ]
+    },
+    {
+        "triplet_id": 47,
+        "keywords": [
+            "nox1",
+            "belong"
+        ]
+    },
+    {
+        "triplet_id": 48,
+        "keywords": [
+            "nox1",
+            "nadph",
+            "utilize"
+        ]
+    },
+    {
+        "triplet_id": 49,
+        "keywords": [
+            "increase",
+            "expression",
+            "cause"
+        ]
+    },
+    {
+        "triplet_id": 50,
+        "keywords": [
+            "studies",
+            "reduce",
+            "size"
+        ]
+    },
+    {
+        "triplet_id": 51,
+        "keywords": [
+            "inhibition",
+            "markers",
+            "reduce"
+        ]
+    },
+    {
+        "triplet_id": 52,
+        "keywords": [
+            "hypothesis",
+            "results",
+            "support"
+        ]
+    },
+    {
+        "triplet_id": 53,
+        "keywords": [
+            "expression",
+            "results"
+        ]
+    },
+    {
+        "triplet_id": 54,
+        "keywords": [
+            "expression",
+            "lead"
+        ]
+    },
+    {
+        "triplet_id": 55,
+        "keywords": [
+            "exercise",
+            "tolerance",
+            "decreases"
+        ]
+    },
+    {
+        "triplet_id": 56,
+        "keywords": [
+            "pathway",
+            "role",
+            "play"
+        ]
+    },
+    {
+        "triplet_id": 57,
+        "keywords": [
+            "induction",
+            "spaceflight",
+            "prevent"
+        ]
+    },
+    {
+        "triplet_id": 58,
+        "keywords": [
+            "regulation",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 59,
+        "keywords": [
+            "sensitivity",
+            "codes",
+            "cause"
+        ]
+    },
+    {
+        "triplet_id": 60,
+        "keywords": [
+            "results",
+            "changes",
+            "indicate"
+        ]
+    },
+    {
+        "triplet_id": 61,
+        "keywords": [
+            "progression",
+            "regulate"
+        ]
+    },
+    {
+        "triplet_id": 62,
+        "keywords": [
+            "levels",
+            "analyze"
+        ]
+    },
+    {
+        "triplet_id": 63,
+        "keywords": [
+            "p53",
+            "genes",
+            "include"
+        ]
+    },
+    {
+        "triplet_id": 64,
+        "keywords": [
+            "hearts"
+        ]
+    },
+    {
+        "triplet_id": 65,
+        "keywords": [
+            "associate",
+            "increases"
+        ]
+    },
+    {
+        "triplet_id": 66,
+        "keywords": [
+            "heart",
+            "limit",
+            "ability"
+        ]
+    },
+    {
+        "triplet_id": 67,
+        "keywords": [
+            "elevation",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 68,
+        "keywords": [
+            "elevation",
+            "interfere"
+        ]
+    },
+    {
+        "triplet_id": 69,
+        "keywords": [
+            "pttg1",
+            "cycle",
+            "regulate"
+        ]
+    },
+    {
+        "triplet_id": 70,
+        "keywords": [
+            "decrease",
+            "contribute"
+        ]
+    },
+    {
+        "triplet_id": 71,
+        "keywords": [
+            "cyclins",
+            "downregulate"
+        ]
+    },
+    {
+        "triplet_id": 72,
+        "keywords": [
+            "suggest",
+            "expression"
+        ]
+    },
+    {
+        "triplet_id": 73,
+        "keywords": [
+            "genes",
+            "alter"
+        ]
+    },
+    {
+        "triplet_id": 74,
+        "keywords": [
+            "possibility",
+            "rule"
+        ]
+    },
+    {
+        "triplet_id": 75,
+        "keywords": [
+            "downregulate",
+            "evidence"
+        ]
+    },
+    {
+        "triplet_id": 76,
+        "keywords": [
+            "observe",
+            "expression"
+        ]
+    },
+    {
+        "triplet_id": 77,
+        "keywords": [
+            "decrement",
+            "cultures"
+        ]
+    },
+    {
+        "triplet_id": 78,
+        "keywords": [
+            "implicate",
+            "findings",
+            "mechanism"
+        ]
+    },
+    {
+        "triplet_id": 79,
+        "keywords": [
+            "subset",
+            "associate"
+        ]
+    },
+    {
+        "triplet_id": 80,
+        "keywords": [
+            "pressures",
+            "change"
+        ]
+    },
+    {
+        "triplet_id": 81,
+        "keywords": [
+            "output",
+            "increase"
+        ]
+    },
+    {
+        "triplet_id": 82,
+        "keywords": [
+            "duration",
+            "factors",
+            "include"
+        ]
+    },
+    {
+        "triplet_id": 83,
+        "keywords": [
+            "changes",
+            "reflect"
+        ]
+    },
+    {
+        "triplet_id": 84,
+        "keywords": [
+            "experiments",
+            "focus"
+        ]
+    }
+]
